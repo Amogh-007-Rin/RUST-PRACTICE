@@ -10,7 +10,7 @@ This repository serves as a dedicated space to document my journey in mastering 
 
 ## 💡 Why Rust?
 
-I decided to pick up Rust because it represents the perfect intersection of performance and reliability. Coming from a background in [Your Previous Language, e.g., Python/JS], I wanted a language that offers:
+I decided to pick up Rust because it represents the perfect intersection of performance and reliability. Coming from a background in [JavaScript/TypeScript, Java, Python and Solidity], I wanted a language that offers:
 
 * **Memory Safety without Garbage Collection:** Writing bug-free code at a low level.
 * **Blazing Speed:** Performance comparable to C++ but with modern tooling.
@@ -20,7 +20,7 @@ I decided to pick up Rust because it represents the perfect intersection of perf
 
 One of my primary motivations for learning Rust is its dominance in the **Web3** space, particularly on the **Solana** blockchain. 
 
-I am fascinated by decentralized applications (dApps) and smart contract development. Solana's high throughput and low latency are powered by Rust, and I aim to leverage this language to:
+I am fascinated by decentralized applications (dApps) and smart contract development which often called as Solana Programs in Solana Space. Solana's high throughput and low latency are powered by Rust, and I aim to leverage this language to:
 * Build performant On-Chain Programs.
 * Understand the Anchor Framework.
 * Contribute to the decentralized finance (DeFi) ecosystem.
@@ -68,7 +68,7 @@ To run any of the specific files or projects in this repo, ensure you have Rust 
 git clone [https://github.com/Amogh-007-Rin/RUST-PRACTICE.git](https://github.com/Amogh-007-Rin/RUST-PRACTICE.git)
 
 # Navigate to a project directory
-cd your-repo-name/basics
+cd your-repo-name/basics  --> May be some of the other directories in the future.
 
 # Run the project
 cargo run
