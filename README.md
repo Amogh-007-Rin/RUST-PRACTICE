@@ -1,70 +1,113 @@
-# Rust.Stack
+<p align="center">
+  <img src="public/Repo-Banner-01.png" alt="Rust.Stack — A 0–100, linear, project-based Rust learning sandbox for beginners" width="100%">
+</p>
 
-![CI](https://github.com/Amogh-007-Rin/RUST.STACK/actions/workflows/ci.yml/badge.svg)
+<h1 align="center">🦀 Rust.Stack</h1>
 
-**A self-contained, offline-friendly, 0-to-100 modular Rust learning sandbox.**
+<p align="center"><b>A self-contained, offline-friendly, 0-to-100 modular Rust learning sandbox.</b></p>
 
-Rust.Stack takes you from zero Rust knowledge to job-ready across every major
-Rust specialization — backend, async/infra, systems/embedded, CLI/networking,
-WASM/frontend, game dev, blockchain — and finishes with interview and
-portfolio readiness.
+<p align="center">
+  <img src="https://img.shields.io/badge/Rust-CE422B?style=for-the-badge&logo=rust&logoColor=white" alt="Rust">
+  <img src="https://img.shields.io/github/actions/workflow/status/Amogh-007-Rin/RUST.STACK/ci.yml?style=for-the-badge&label=CI&logo=githubactions&logoColor=white" alt="CI Status">
+  <img src="https://img.shields.io/badge/License-MIT-F2A65A?style=for-the-badge" alt="License: MIT">
+  <img src="https://img.shields.io/badge/Modules-101-2196F3?style=for-the-badge" alt="101 Modules">
+  <img src="https://img.shields.io/badge/Capstones-10-9C27B0?style=for-the-badge" alt="10 Capstones">
+  <img src="https://img.shields.io/badge/PRs-welcome-4CAF50?style=for-the-badge" alt="PRs Welcome">
+</p>
 
-It's built for programmers who are comfortable with general programming
-concepts in *some* language (Python, JS, Java, C++, etc.) but have zero Rust
-experience. No website, no toolchain wizard, no build step: `git clone` and go.
+<p align="center">
+  Rust.Stack takes you from <b>zero Rust knowledge</b> to <b>job-ready</b> across every major Rust
+  specialization — backend, async/infra, systems/embedded, CLI/networking, WASM/frontend, game dev,
+  blockchain — and finishes with interview and portfolio readiness.
+</p>
+
+<p align="center">
+  Built for programmers comfortable with general programming concepts in <i>some</i> language
+  (Python, JS, Java, C++, etc.) but with zero Rust experience.<br>
+  No website. No toolchain wizard. No build step. <code>git clone</code> and go.
+</p>
+
+<br>
+
+<a id="toc"></a>
+## 📚 Table of Contents
+
+- [✨ What Makes This Different](#what-makes-this-different)
+- [🗺️ Curriculum at a Glance](#curriculum-at-a-glance)
+- [🏆 Capstones](#capstones)
+- [⚡ Quick Start](#quick-start)
+- [📋 Prerequisites](#prerequisites)
+- [📖 How to Use This Repo](#how-to-use-this-repo)
+- [🗂️ Repository Structure](#repository-structure)
+- [❓ FAQ](#faq)
+- [✅ Progress Tracking](#progress-tracking)
+- [📜 License & Contributing](#license--contributing)
+- [🔁 CI](#ci)
 
 ---
 
-## What Makes This Different
+<a id="what-makes-this-different"></a>
+## ✨ What Makes This Different
 
 | | |
 |---|---|
-| **Strictly linear** | Module 000 → Module 100, in order. No branching, no choice paralysis. Every specialization gets a full 10-module block in sequence. |
-| **100% hands-on** | Every module ships with a broken/incomplete Cargo crate. You fix it until `cargo test` passes. Every 10th module is a larger capstone project. |
-| **Solutions are visible** | Every module has a `solutions/` folder with the reference implementation, sitting alongside the exercise. No paywalls, no spoiler tags. |
-| **Idiomatic & production-grade** | `?`, iterators, `thiserror`, `anyhow`, current-edition idioms throughout. `rustfmt` and `clippy` clean. |
-| **Everything runs offline** | Once dependencies are cached, everything — READMEs, exercises, solutions — works without internet. |
-| **Interview-ready finish** | The final block covers DSA in Rust, system design, mock interviews, open source contribution, and portfolio building. Capstone 10 is a deliberate portfolio piece. |
+| 🧵 **Strictly linear** | Module 000 → Module 100, in order. No branching, no choice paralysis. Every specialization gets a full 10-module block in sequence. |
+| 🛠️ **100% hands-on** | Every module ships with a broken/incomplete Cargo crate. You fix it until `cargo test` passes. Every 10th module is a larger capstone project. |
+| 👁️ **Solutions are visible** | Every module has a `solutions/` folder with the reference implementation, sitting alongside the exercise. No paywalls, no spoiler tags. |
+| 🏗️ **Idiomatic & production-grade** | `?`, iterators, `thiserror`, `anyhow`, current-edition idioms throughout. `rustfmt` and `clippy` clean. |
+| 📴 **Runs offline** | Once dependencies are cached, everything — READMEs, exercises, solutions — works without internet. |
+| 🎯 **Interview-ready finish** | The final block covers DSA in Rust, system design, mock interviews, open source contribution, and portfolio building. Capstone 10 is a deliberate portfolio piece. |
+
+<div align="right"><a href="#toc">⬆ back to top</a></div>
 
 ---
 
-## The Curriculum at a Glance
+<a id="curriculum-at-a-glance"></a>
+## 🗺️ Curriculum at a Glance
 
 **92 modules + 10 capstones, organized into 10 blocks:**
 
 | Block | Modules | Focus |
 |---|---|---|
-| **A** — Foundations I | 001–009 | Variables, ownership, borrowing, structs, enums, modules |
-| **B** — Foundations II | 011–019 | Collections, error handling, generics, traits, lifetimes, testing |
-| **C** — Intermediate Rust I | 021–029 | Closures, iterators, pattern matching, trait objects, smart pointers |
-| **D** — Concurrency & Unsafe | 031–039 | Threads, `Mutex`/`Arc`, channels, unsafe Rust, macros, Cargo |
-| **E** — Async Rust | 041–049 | Tokio runtime, async I/O, streams, pinning, structured concurrency |
-| **F** — Systems & Performance | 051–059 | Memory layout, FFI, profiling, benchmarking, SIMD, embedded |
-| **G** — Backend Web | 061–069 | Axum, REST APIs, `sqlx`, JWT auth, middleware, Actix-web, Docker |
-| **H** — CLI, Networking & Distributed | 071–079 | `clap`, `ratatui`, TCP/UDP, gRPC, message queues, distributed systems |
-| **I** — WASM, Frontend, Game, Blockchain | 081–089 | WebAssembly, Leptos, Bevy ECS, embedded revisited, smart contracts |
-| **J** — Interview & Career | 091–100 | DSA in Rust, system design, mock interviews, portfolio, open source |
+| ![A](https://img.shields.io/badge/A-Foundations%20I-CE422B?style=for-the-badge) | 001–009 | Variables, ownership, borrowing, structs, enums, modules |
+| ![B](https://img.shields.io/badge/B-Foundations%20II-F2A65A?style=for-the-badge) | 011–019 | Collections, error handling, generics, traits, lifetimes, testing |
+| ![C](https://img.shields.io/badge/C-Intermediate%20Rust%20I-8BC34A?style=for-the-badge) | 021–029 | Closures, iterators, pattern matching, trait objects, smart pointers |
+| ![D](https://img.shields.io/badge/D-Concurrency%20%26%20Unsafe-009688?style=for-the-badge) | 031–039 | Threads, `Mutex`/`Arc`, channels, unsafe Rust, macros, Cargo |
+| ![E](https://img.shields.io/badge/E-Async%20Rust-2196F3?style=for-the-badge) | 041–049 | Tokio runtime, async I/O, streams, pinning, structured concurrency |
+| ![F](https://img.shields.io/badge/F-Systems%20%26%20Performance-673AB7?style=for-the-badge) | 051–059 | Memory layout, FFI, profiling, benchmarking, SIMD, embedded |
+| ![G](https://img.shields.io/badge/G-Backend%20Web-00BCD4?style=for-the-badge) | 061–069 | Axum, REST APIs, `sqlx`, JWT auth, middleware, Actix-web, Docker |
+| ![H](https://img.shields.io/badge/H-CLI%2C%20Networking%20%26%20Distributed-9C27B0?style=for-the-badge) | 071–079 | `clap`, `ratatui`, TCP/UDP, gRPC, message queues, distributed systems |
+| ![I](https://img.shields.io/badge/I-WASM%2C%20Frontend%2C%20Game%2C%20Blockchain-E91E63?style=for-the-badge) | 081–089 | WebAssembly, Leptos, Bevy ECS, embedded revisited, smart contracts |
+| ![J](https://img.shields.io/badge/J-Interview%20%26%20Career-F44336?style=for-the-badge) | 091–100 | DSA in Rust, system design, mock interviews, portfolio, open source |
 
 Each block ends with a capstone project. Capstone 10 is a **full-stack Rust job-ready project** — the thing you point to in applications.
 
-### Capstones
-
-| # | Project | Key Tech |
-|---|---|---|
-| 01 | [Contact Book CLI](capstones/capstone-01-contact-book-cli/README.md) | Structs, enums, ownership |
-| 02 | [Inventory Management CLI](capstones/capstone-02-inventory-management-cli/README.md) | Collections, errors, JSON persistence |
-| 03 | [In-Memory Graph Library](capstones/capstone-03-in-memory-graph-library/README.md) | Trait objects, iterators, smart pointers |
-| 04 | [Multithreaded Log Processor](capstones/capstone-04-multithreaded-log-processor/README.md) | Threads, channels, `macro_rules!` |
-| 05 | [Concurrent Rate-Limited Web Crawler](capstones/capstone-05-concurrent-web-crawler/README.md) | Tokio, channels, `select!` |
-| 06 | [Benchmarked Data Processing Library](capstones/capstone-06-benchmarked-data-processing-library/README.md) | `criterion`, SIMD, optimization |
-| 07 | [Task Management API](capstones/capstone-07-task-management-api/README.md) | Axum, `sqlx`, JWT, Docker |
-| 08 | [Distributed Key-Value Store](capstones/capstone-08-distributed-key-value-store/README.md) | gRPC, `clap`, replication |
-| 09 | [2D Game Compiled to WebAssembly](capstones/capstone-09-2d-game-in-webassembly/README.md) | Bevy, `wasm-pack` |
-| 10 | [Full-Stack Rust Job-Ready Project](capstones/capstone-10-full-stack-job-ready-project/README.md) | Axum + WASM, portfolio piece |
+<div align="right"><a href="#toc">⬆ back to top</a></div>
 
 ---
 
-## Quick Start
+<a id="capstones"></a>
+## 🏆 Capstones
+
+| # | Project | Key Tech |
+|---|---|---|
+| ![01](https://img.shields.io/badge/-01-CE422B?style=flat-square) | [Contact Book CLI](capstones/capstone-01-contact-book-cli/README.md) | ![Structs](https://img.shields.io/badge/-Structs-CE422B?style=flat-square) ![Enums](https://img.shields.io/badge/-Enums-CE422B?style=flat-square) ![Ownership](https://img.shields.io/badge/-Ownership-CE422B?style=flat-square) |
+| ![02](https://img.shields.io/badge/-02-F2A65A?style=flat-square) | [Inventory Management CLI](capstones/capstone-02-inventory-management-cli/README.md) | ![Collections](https://img.shields.io/badge/-Collections-F2A65A?style=flat-square) ![Errors](https://img.shields.io/badge/-Errors-F2A65A?style=flat-square) ![JSON](https://img.shields.io/badge/-JSON-F2A65A?style=flat-square) |
+| ![03](https://img.shields.io/badge/-03-8BC34A?style=flat-square) | [In-Memory Graph Library](capstones/capstone-03-in-memory-graph-library/README.md) | ![Trait Objects](https://img.shields.io/badge/-Trait%20Objects-8BC34A?style=flat-square) ![Iterators](https://img.shields.io/badge/-Iterators-8BC34A?style=flat-square) ![Smart Pointers](https://img.shields.io/badge/-Smart%20Pointers-8BC34A?style=flat-square) |
+| ![04](https://img.shields.io/badge/-04-009688?style=flat-square) | [Multithreaded Log Processor](capstones/capstone-04-multithreaded-log-processor/README.md) | ![Threads](https://img.shields.io/badge/-Threads-009688?style=flat-square) ![Channels](https://img.shields.io/badge/-Channels-009688?style=flat-square) ![Macros](https://img.shields.io/badge/-Macros-009688?style=flat-square) |
+| ![05](https://img.shields.io/badge/-05-2196F3?style=flat-square) | [Concurrent Rate-Limited Web Crawler](capstones/capstone-05-concurrent-web-crawler/README.md) | ![Tokio](https://img.shields.io/badge/-Tokio-2196F3?style=flat-square) ![Channels](https://img.shields.io/badge/-Channels-2196F3?style=flat-square) ![Select!](https://img.shields.io/badge/-Select!-2196F3?style=flat-square) |
+| ![06](https://img.shields.io/badge/-06-673AB7?style=flat-square) | [Benchmarked Data Processing Library](capstones/capstone-06-benchmarked-data-processing-library/README.md) | ![Criterion](https://img.shields.io/badge/-Criterion-673AB7?style=flat-square) ![SIMD](https://img.shields.io/badge/-SIMD-673AB7?style=flat-square) ![Optimization](https://img.shields.io/badge/-Optimization-673AB7?style=flat-square) |
+| ![07](https://img.shields.io/badge/-07-00BCD4?style=flat-square) | [Task Management API](capstones/capstone-07-task-management-api/README.md) | ![Axum](https://img.shields.io/badge/-Axum-00BCD4?style=flat-square) ![sqlx](https://img.shields.io/badge/-sqlx-00BCD4?style=flat-square) ![JWT](https://img.shields.io/badge/-JWT-00BCD4?style=flat-square) ![Docker](https://img.shields.io/badge/-Docker-00BCD4?style=flat-square) |
+| ![08](https://img.shields.io/badge/-08-9C27B0?style=flat-square) | [Distributed Key-Value Store](capstones/capstone-08-distributed-key-value-store/README.md) | ![gRPC](https://img.shields.io/badge/-gRPC-9C27B0?style=flat-square) ![Clap](https://img.shields.io/badge/-Clap-9C27B0?style=flat-square) ![Replication](https://img.shields.io/badge/-Replication-9C27B0?style=flat-square) |
+| ![09](https://img.shields.io/badge/-09-E91E63?style=flat-square) | [2D Game Compiled to WebAssembly](capstones/capstone-09-2d-game-in-webassembly/README.md) | ![Bevy](https://img.shields.io/badge/-Bevy-E91E63?style=flat-square) ![wasm--pack](https://img.shields.io/badge/-wasm--pack-E91E63?style=flat-square) |
+| ![10](https://img.shields.io/badge/-10-F44336?style=flat-square) | [Full-Stack Rust Job-Ready Project](capstones/capstone-10-full-stack-job-ready-project/README.md) | ![Axum](https://img.shields.io/badge/-Axum-F44336?style=flat-square) ![WASM](https://img.shields.io/badge/-WASM-F44336?style=flat-square) ![Portfolio](https://img.shields.io/badge/-Portfolio-F44336?style=flat-square) |
+
+<div align="right"><a href="#toc">⬆ back to top</a></div>
+
+---
+
+<a id="quick-start"></a>
+## ⚡ Quick Start
 
 ```bash
 # 1. Install Rust (if you haven't already)
@@ -81,28 +124,37 @@ cargo check --workspace
 cat modules/module-000-orientation/README.md
 ```
 
-**Estimated completion time:** 3–6 months at ~10 hours/week, assuming you work through every module and capstone.
+> [!TIP]
+> **Estimated completion time:** 3–6 months at ~10 hours/week, assuming you work through every module and capstone.
+
+<div align="right"><a href="#toc">⬆ back to top</a></div>
 
 ---
 
-## Prerequisites
+<a id="prerequisites"></a>
+## 📋 Prerequisites
 
-- **Rust via rustup** (stable toolchain — pinned by `rust-toolchain.toml`).
-- An editor with **rust-analyzer** (recommended: VS Code with the rust-analyzer extension).
-- Git.
-- Familiarity with programming fundamentals in any language (variables, functions, loops, basic data structures).
+- 🦀 **Rust via rustup** — stable toolchain, pinned by `rust-toolchain.toml`
+- 🧩 **rust-analyzer** — recommended: VS Code with the rust-analyzer extension
+- 🔧 **Git**
+- 🧠 Familiarity with programming fundamentals in any language (variables, functions, loops, basic data structures)
 
-Everything installs from the internet once; after that, all content, examples,
-and exercises are fully offline. **See [docs/SETUP.md](docs/SETUP.md)** for detailed setup instructions.
+> [!NOTE]
+> Everything installs from the internet once; after that, all content, examples, and exercises are fully offline.
+
+**📄 See [docs/SETUP.md](docs/SETUP.md)** for detailed setup instructions.
+
+<div align="right"><a href="#toc">⬆ back to top</a></div>
 
 ---
 
-## How to Use This Repo
+<a id="how-to-use-this-repo"></a>
+## 📖 How to Use This Repo
 
 The curriculum is strictly linear: **Module 000 → Module 100**, with a capstone
 project at the end of every 10-module block.
 
-### Module Workflow
+### 🧩 Module Workflow
 
 ```
 modules/module-042-the-tokio-runtime/
@@ -117,26 +169,26 @@ modules/module-042-the-tokio-runtime/
     └── tests/         ← Identical tests, all passing
 ```
 
-1. **Read** the module's `README.md` — it explains the concept from scratch with prose and code examples.
-2. **Open** the exercise crate in your editor. Find the `TODO(module-XXX)` comments.
-3. **Fix** the code until the tests pass:
+1. **📘 Read** the module's `README.md` — it explains the concept from scratch with prose and code examples.
+2. **🔍 Open** the exercise crate in your editor. Find the `TODO(module-XXX)` comments.
+3. **🛠️ Fix** the code until the tests pass:
    ```bash
    cargo test -p module-042-exercises   # should start RED, end GREEN
    ```
-4. **Peek** at `solutions/` if you get truly stuck. No shame — the reference is there on purpose.
-5. **Verify** your work:
+4. **👀 Peek** at `solutions/` if you get truly stuck. No shame — the reference is there on purpose.
+5. **✅ Verify** your work:
    ```bash
    ./scripts/verify_module.sh 042       # runs fmt, clippy, and tests
    ```
-6. **Check the box** in the curriculum map below and move on.
+6. **☑️ Check the box** in the [curriculum map](#progress-tracking) below and move on.
 
-### Capstone Workflow
+### 🏆 Capstone Workflow
 
 Same pattern, just bigger. Each capstone lives in `capstones/capstone-NN-*/` with
 `starter/` (your work) and `solution/` (reference). They span 4–8 hours each and
 integrate everything from the preceding block.
 
-### Running Tests
+### 🧪 Running Tests
 
 | Command | What it does |
 |---|---|
@@ -145,11 +197,14 @@ integrate everything from the preceding block.
 | `cargo test` | Run tests for all solution crates |
 | `./scripts/verify_module.sh 042` | fmt + clippy + test for one module |
 
-**Full walkthrough, module anatomy, and FAQ: [docs/HOW_TO_USE.md](docs/HOW_TO_USE.md).**
+**📚 Full walkthrough, module anatomy, and FAQ: [docs/HOW_TO_USE.md](docs/HOW_TO_USE.md).**
+
+<div align="right"><a href="#toc">⬆ back to top</a></div>
 
 ---
 
-## Repository Structure
+<a id="repository-structure"></a>
+## 🗂️ Repository Structure
 
 ```
 Rust.Stack/
@@ -176,57 +231,87 @@ Rust.Stack/
     └── capstone-10-full-stack-job-ready-project/
 ```
 
+<div align="right"><a href="#toc">⬆ back to top</a></div>
+
 ---
 
-## FAQ
+<a id="faq"></a>
+## ❓ FAQ
 
-**I already know some Rust. Can I skip ahead?**
+<details>
+<summary><b>I already know some Rust. Can I skip ahead?</b></summary>
+<br>
 
 Yes. Each module's README lists prerequisites. If you're comfortable with a
 topic, skim the README, run the solution tests to confirm, and move on. The
 capstones are especially useful for validation even if you skip blocks.
 
-**Do I need to be online?**
+</details>
+
+<details>
+<summary><b>Do I need to be online?</b></summary>
+<br>
 
 No. Clone the repo once, run `cargo fetch` to cache dependencies, and you're
 fully offline from that point forward.
 
-**Can I contribute?**
+</details>
+
+<details>
+<summary><b>Can I contribute?</b></summary>
+<br>
 
 Absolutely. See [CONTRIBUTING.md](CONTRIBUTING.md) for the folder shape
 requirements, content guidelines, and the acceptance bar (fmt, clippy, tests
 must be clean). PRs welcome for new modules, improvements to existing ones, or
 bug fixes.
 
-**What if a module's solution tests don't pass for me?**
+</details>
+
+<details>
+<summary><b>What if a module's solution tests don't pass for me?</b></summary>
+<br>
 
 Make sure you're on the stable toolchain (`rustup show`). The repo pins its
 toolchain in `rust-toolchain.toml`. If you're on a different Rust version, some
 dependencies may not compile. File an issue if the problem persists.
 
-**Is there a completion certificate or credential?**
+</details>
+
+<details>
+<summary><b>Is there a completion certificate or credential?</b></summary>
+<br>
 
 No. This is a plain git repo, not a platform. The portfolio project (Capstone
 10) and the capstones you've built serve as your credential.
 
-**How long does it take?**
+</details>
+
+<details>
+<summary><b>How long does it take?</b></summary>
+<br>
 
 Roughly 3–6 months at ~10 hours/week. Each module takes 45–90 minutes; each
 capstone takes 4–8 hours. The curriculum has 101 slots (92 modules + 10
 capstones, counting Module 000 and Capstone 10).
 
+</details>
+
+<div align="right"><a href="#toc">⬆ back to top</a></div>
+
 ---
 
-## Progress Tracking
+<a id="progress-tracking"></a>
+## ✅ Progress Tracking
 
 Tick the checkboxes below as you complete modules and capstones. Run
 `./scripts/check_progress.sh` to see your completion percentage.
 
-### Module 000 — Orientation
-
 - [ ] [Module 000 — Orientation](modules/module-000-orientation/README.md)
 
-### Block A — Foundations I (Modules 001–009) → Capstone 01
+<details open>
+<summary>🟥 <b>Block A — Foundations I</b> <code>001–009</code> → Capstone 01</summary>
+<br>
 
 - [ ] [Module 001 — Toolchain & Your First Program](modules/module-001-toolchain-and-first-program/README.md)
 - [ ] [Module 002 — Variables, Mutability & Data Types](modules/module-002-variables-mutability-and-data-types/README.md)
@@ -239,7 +324,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 009 — Modules, Crates & Packages](modules/module-009-modules-crates-and-packages/README.md)
 - [ ] [Capstone 01 — Contact Book CLI](capstones/capstone-01-contact-book-cli/README.md)
 
-### Block B — Foundations II (Modules 011–019) → Capstone 02
+</details>
+
+<details>
+<summary>🟧 <b>Block B — Foundations II</b> <code>011–019</code> → Capstone 02</summary>
+<br>
 
 - [ ] [Module 011 — Common Collections I: `Vec<T>`](modules/module-011-common-collections-1-vec/README.md)
 - [ ] [Module 012 — Common Collections II: `HashMap` & `HashSet`](modules/module-012-common-collections-2-hashmap-hashset/README.md)
@@ -252,7 +341,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 019 — Testing in Rust](modules/module-019-testing-in-rust/README.md)
 - [ ] [Capstone 02 — Inventory Management CLI](capstones/capstone-02-inventory-management-cli/README.md)
 
-### Block C — Intermediate Rust I (Modules 021–029) → Capstone 03
+</details>
+
+<details>
+<summary>🟨 <b>Block C — Intermediate Rust I</b> <code>021–029</code> → Capstone 03</summary>
+<br>
 
 - [ ] [Module 021 — Closures](modules/module-021-closures/README.md)
 - [ ] [Module 022 — Iterators I: The `Iterator` Trait](modules/module-022-iterators-1-the-iterator-trait/README.md)
@@ -265,7 +358,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 029 — Smart Pointers II: `Rc` & `RefCell`](modules/module-029-smart-pointers-2-rc-refcell/README.md)
 - [ ] [Capstone 03 — In-Memory Graph Library](capstones/capstone-03-in-memory-graph-library/README.md)
 
-### Block D — Intermediate Rust II: Concurrency, Unsafe & Macros (Modules 031–039) → Capstone 04
+</details>
+
+<details>
+<summary>🟩 <b>Block D — Concurrency, Unsafe & Macros</b> <code>031–039</code> → Capstone 04</summary>
+<br>
 
 - [ ] [Module 031 — Concurrency I: Threads](modules/module-031-concurrency-1-threads/README.md)
 - [ ] [Module 032 — Concurrency II: `Mutex` & `Arc`](modules/module-032-concurrency-2-mutex-arc/README.md)
@@ -278,7 +375,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 039 — Cargo Deep Dive](modules/module-039-cargo-deep-dive/README.md)
 - [ ] [Capstone 04 — Multithreaded Log Processor](capstones/capstone-04-multithreaded-log-processor/README.md)
 
-### Block E — Async Rust (Modules 041–049) → Capstone 05
+</details>
+
+<details>
+<summary>🟦 <b>Block E — Async Rust</b> <code>041–049</code> → Capstone 05</summary>
+<br>
 
 - [ ] [Module 041 — Async Fundamentals](modules/module-041-async-fundamentals/README.md)
 - [ ] [Module 042 — The Tokio Runtime](modules/module-042-the-tokio-runtime/README.md)
@@ -291,7 +392,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 049 — Async Patterns & Pitfalls](modules/module-049-async-patterns-and-pitfalls/README.md)
 - [ ] [Capstone 05 — Concurrent Rate-Limited Web Crawler](capstones/capstone-05-concurrent-web-crawler/README.md)
 
-### Block F — Systems Programming & Performance (Modules 051–059) → Capstone 06
+</details>
+
+<details>
+<summary>🟪 <b>Block F — Systems Programming & Performance</b> <code>051–059</code> → Capstone 06</summary>
+<br>
 
 - [ ] [Module 051 — Memory Layout Deep Dive](modules/module-051-memory-layout-deep-dive/README.md)
 - [ ] [Module 052 — FFI I: Calling C from Rust](modules/module-052-ffi-1-calling-c-from-rust/README.md)
@@ -304,7 +409,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 059 — Embedded Rust Hands-On](modules/module-059-embedded-rust-hands-on/README.md)
 - [ ] [Capstone 06 — Benchmarked Data Processing Library](capstones/capstone-06-benchmarked-data-processing-library/README.md)
 
-### Block G — Backend Web Development (Modules 061–069) → Capstone 07
+</details>
+
+<details>
+<summary>🟫 <b>Block G — Backend Web Development</b> <code>061–069</code> → Capstone 07</summary>
+<br>
 
 - [ ] [Module 061 — HTTP & Web Fundamentals in Rust](modules/module-061-http-and-web-fundamentals/README.md)
 - [ ] [Module 062 — Axum Fundamentals](modules/module-062-axum-fundamentals/README.md)
@@ -317,7 +426,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 069 — Deployment & Observability](modules/module-069-deployment-and-observability/README.md)
 - [ ] [Capstone 07 — Task Management API](capstones/capstone-07-task-management-api/README.md)
 
-### Block H — CLI, Networking & Distributed Systems (Modules 071–079) → Capstone 08
+</details>
+
+<details>
+<summary>⬛ <b>Block H — CLI, Networking & Distributed Systems</b> <code>071–079</code> → Capstone 08</summary>
+<br>
 
 - [ ] [Module 071 — Building CLI Tools I: `clap`](modules/module-071-building-cli-tools-1-clap/README.md)
 - [ ] [Module 072 — Building CLI Tools II: Config, Errors & Polish](modules/module-072-building-cli-tools-2-config-errors-and-polish/README.md)
@@ -330,7 +443,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 079 — Message Queues & Event-Driven Systems](modules/module-079-message-queues-and-event-driven/README.md)
 - [ ] [Capstone 08 — Distributed Key-Value Store](capstones/capstone-08-distributed-key-value-store/README.md)
 
-### Block I — WASM, Frontend, Game Dev, Embedded & Blockchain (Modules 081–089) → Capstone 09
+</details>
+
+<details>
+<summary>🟣 <b>Block I — WASM, Frontend, Game Dev, Embedded & Blockchain</b> <code>081–089</code> → Capstone 09</summary>
+<br>
 
 - [ ] [Module 081 — Introduction to WebAssembly](modules/module-081-introduction-to-webassembly/README.md)
 - [ ] [Module 082 — `wasm-bindgen` & JS Interop](modules/module-082-wasm-bindgen-and-js-interop/README.md)
@@ -343,7 +460,11 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 089 — Comparing Rust Career Specializations](modules/module-089-comparing-rust-career-specializations/README.md)
 - [ ] [Capstone 09 — 2D Game Compiled to WebAssembly](capstones/capstone-09-2d-game-in-webassembly/README.md)
 
-### Block J — Interview Prep, DSA & Career Readiness (Modules 091–099) → Capstone 10
+</details>
+
+<details>
+<summary>🔴 <b>Block J — Interview Prep, DSA & Career Readiness</b> <code>091–100</code> → Capstone 10</summary>
+<br>
 
 - [ ] [Module 091 — Data Structures in Rust I](modules/module-091-data-structures-in-rust-1/README.md)
 - [ ] [Module 092 — Data Structures in Rust II](modules/module-092-data-structures-in-rust-2/README.md)
@@ -357,17 +478,34 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 100 — Final Capstone Support](modules/module-100-final-capstone-support/README.md)
 - [ ] [Capstone 10 — Full-Stack Rust Job-Ready Project](capstones/capstone-10-full-stack-job-ready-project/README.md)
 
----
+</details>
 
-## License & Contributing
-
-- **License:** [MIT](LICENSE)
-- **Contributing:** see [CONTRIBUTING.md](CONTRIBUTING.md) — required folder shapes,
-  content guidelines, and the acceptance bar (fmt, clippy, tests clean, always).
+<div align="right"><a href="#toc">⬆ back to top</a></div>
 
 ---
 
-## CI
+<a id="license--contributing"></a>
+## 📜 License & Contributing
+
+| | |
+|---|---|
+| 📄 **License** | [MIT](LICENSE) |
+| 🤝 **Contributing** | See [CONTRIBUTING.md](CONTRIBUTING.md) — required folder shapes, content guidelines, and the acceptance bar (fmt, clippy, tests clean, always). |
+
+<div align="right"><a href="#toc">⬆ back to top</a></div>
+
+---
+
+<a id="ci"></a>
+## 🔁 CI
 
 Every push and PR to `main` runs `cargo fmt --check`, `cargo clippy --workspace -- -D warnings`,
 and `cargo test` via [GitHub Actions](.github/workflows/ci.yml).
+
+<p align="center">
+  <img src="https://img.shields.io/github/actions/workflow/status/Amogh-007-Rin/RUST.STACK/ci.yml?style=for-the-badge&label=Build&logo=githubactions&logoColor=white" alt="Build Status">
+</p>
+
+<p align="center">
+  <sub>Built with 🦀, one module at a time. Star ⭐ this repo if it's helping you learn Rust.</sub>
+</p>
