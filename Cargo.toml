@@ -7,11 +7,19 @@ members = [
     "capstones/*/solution",
 ]
 
-# Worksheet-style modules (no crates) and module-100 (README pointer only)
-# don't match the member globs' shape; exclude them explicitly so cargo
-# doesn't try to parse their non-crate folders.
+# Only solution crates are built/tested by default — exercises and starters are
+# constructed to fail tests until the learner implements them (per spec §3).
+# `cargo test` (without --workspace) tests only these default members.
+default-members = [
+    "modules/*/solutions",
+    "capstones/*/solution",
+]
+
+# Worksheet-style modules (no crates), module-100 (README pointer only),
+# and module-002 (intentional compile-error exercise per spec §3).
 exclude = [
     "modules/module-000-orientation",
+    "modules/module-002-variables-mutability-and-data-types/exercises",
     "modules/module-089-comparing-rust-career-specializations",
     "modules/module-096-open-source-contribution",
     "modules/module-097-building-your-portfolio",
@@ -20,9 +28,6 @@ exclude = [
 
 [workspace.package]
 edition = "2021"
-
-[workspace.lints.rust]
-unsafe_code = "allow"
 
 [profile.release]
 lto = true
