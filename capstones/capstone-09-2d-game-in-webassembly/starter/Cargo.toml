@@ -2,5 +2,9 @@
 name = "capstone-09-starter"
 version = "0.1.0"
 edition = "2021"
+description = "2D Game Compiled to WebAssembly (starter)"
 
 [dependencies]
+rand = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
