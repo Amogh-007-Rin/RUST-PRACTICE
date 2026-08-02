@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = [
+    "modules/*/exercises",
+    "modules/*/solutions",
+    "capstones/*/starter",
+    "capstones/*/solution",
+]
+
+# Worksheet-style modules (no crates) and module-100 (README pointer only)
+# don't match the member globs' shape; exclude them explicitly so cargo
+# doesn't try to parse their non-crate folders.
+exclude = [
+    "modules/module-000-orientation",
+    "modules/module-089-comparing-rust-career-specializations",
+    "modules/module-096-open-source-contribution",
+    "modules/module-097-building-your-portfolio",
+    "modules/module-100-final-capstone-support",
+]
+
+[workspace.package]
+edition = "2021"
+
+[workspace.lints.rust]
+unsafe_code = "allow"
+
+[profile.release]
+lto = true

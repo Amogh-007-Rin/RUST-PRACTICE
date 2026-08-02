@@ -1,0 +1,6 @@
+[package]
+name = "module-087-exercises"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
