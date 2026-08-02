@@ -23,7 +23,7 @@
 
 <p>
   Built for programmers comfortable with general programming concepts in <i>some</i> language
-  (Python, JS, Java, C++, etc.) but with zero Rust experience.<br>
+  (Python, JS, Java, C++, etc.) but with zero Rust experience.
   No website. No toolchain wizard. No build step. <code>git clone</code> and go.
 </p>
 
