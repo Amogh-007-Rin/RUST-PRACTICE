@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/Repo-Banner-01.png" alt="Rust.Stack — A 0–100, linear, project-based Rust learning sandbox for beginners" width="100%">
+  <img src="public/Repo-Banner-02.png" alt="Rust.Stack — A 0–100, linear, project-based Rust learning sandbox for beginners" width="100%">
 </p>
 
 <h1 align="center">🦀 Rust.Stack</h1>
@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/PRs-welcome-4CAF50?style=for-the-badge" alt="PRs Welcome">
 </p>
 
-<p align="center">
+<p>
   Rust.Stack takes you from <b>zero Rust knowledge</b> to <b>job-ready</b> across every major Rust
   specialization — backend, async/infra, systems/embedded, CLI/networking, WASM/frontend, game dev,
   blockchain — and finishes with interview and portfolio readiness.
@@ -496,15 +496,6 @@ Tick the checkboxes below as you complete modules and capstones. Run
 
 ---
 
-<a id="ci"></a>
-## 🔁 CI
-
-Every push and PR to `main` runs `cargo fmt --check`, `cargo clippy --workspace -- -D warnings`,
-and `cargo test` via [GitHub Actions](.github/workflows/ci.yml).
-
-<p align="center">
-  <img src="https://img.shields.io/github/actions/workflow/status/Amogh-007-Rin/RUST.STACK/ci.yml?style=for-the-badge&label=Build&logo=githubactions&logoColor=white" alt="Build Status">
-</p>
 
 <p align="center">
   <sub>Built with 🦀, one module at a time. Star ⭐ this repo if it's helping you learn Rust.</sub>
