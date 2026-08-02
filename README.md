@@ -21,7 +21,7 @@
   blockchain — and finishes with interview and portfolio readiness.
 </p>
 
-<p align="center">
+<p>
   Built for programmers comfortable with general programming concepts in <i>some</i> language
   (Python, JS, Java, C++, etc.) but with zero Rust experience.<br>
   No website. No toolchain wizard. No build step. <code>git clone</code> and go.
