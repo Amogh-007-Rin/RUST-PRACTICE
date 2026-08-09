@@ -32,3 +32,13 @@ pub fn find_hotspot<'a>(traces: &[(&'a str, u64)]) -> Option<&'a str> {
         .max_by_key(|(_, dur)| *dur)
         .map(|(name, _)| name)
 }
+
+/// Return the index and duration of the first sample strictly above `threshold`.
+#[inline(never)]
+pub fn first_slow_sample(samples: &[u64], threshold: u64) -> Option<(usize, u64)> {
+    samples
+        .iter()
+        .copied()
+        .enumerate()
+        .find(|(_, duration)| *duration > threshold)
+}

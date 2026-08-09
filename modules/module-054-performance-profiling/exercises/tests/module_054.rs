@@ -1,4 +1,4 @@
-use module_054_exercises::{compute_self_time, find_hotspot, parse_call_trace};
+use module_054_exercises::{compute_self_time, find_hotspot, first_slow_sample, parse_call_trace};
 
 #[test]
 fn parse_single_line() {
@@ -46,7 +46,6 @@ fn self_time_empty_trace() {
 #[test]
 fn hotspot_finds_max_total() {
     let traces = vec![("main", 40), ("parse", 30), ("parse", 40), ("write", 20)];
-    // parse total = 70, main = 40, write = 20
     assert_eq!(find_hotspot(&traces), Some("parse"));
 }
 
@@ -66,4 +65,22 @@ fn hotspot_tie_returns_one() {
     let traces = vec![("a", 50), ("b", 50)];
     let result = find_hotspot(&traces);
     assert!(result == Some("a") || result == Some("b"));
+}
+
+#[test]
+fn slow_sample_returns_first_value_above_threshold() {
+    let samples = [12, 18, 27, 41];
+    assert_eq!(first_slow_sample(&samples, 25), Some((2, 27)));
+}
+
+#[test]
+fn slow_sample_treats_threshold_as_acceptable() {
+    let samples = [12, 25, 27];
+    assert_eq!(first_slow_sample(&samples, 25), Some((2, 27)));
+}
+
+#[test]
+fn slow_sample_handles_empty_and_fast_inputs() {
+    assert_eq!(first_slow_sample(&[], 25), None);
+    assert_eq!(first_slow_sample(&[10, 20, 24], 25), None);
 }

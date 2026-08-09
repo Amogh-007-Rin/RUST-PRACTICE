@@ -2,7 +2,7 @@
 
 **Block:** Block F — Systems Programming & Performance
 **Estimated time:** 45–75 min
-**Prerequisites:** Module 019 (Testing in Rust), Module 054 (Performance Profiling)
+**Prerequisites:** Module 019 (Testing in Rust), Module 054 (Native Debugging and Performance Profiling)
 
 ## Learning Objectives
 

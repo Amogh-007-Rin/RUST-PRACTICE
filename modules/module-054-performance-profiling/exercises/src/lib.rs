@@ -24,3 +24,18 @@ pub fn find_hotspot<'a>(traces: &[(&'a str, u64)]) -> Option<&'a str> {
     let _ = traces;
     panic!("TODO(module-054): implement find_hotspot")
 }
+
+/// Return the index and duration of the first sample strictly above `threshold`.
+///
+/// This scaffold contains an intentional boundary bug. Use the `debug_lab`
+/// binary and a native debugger to inspect the comparison, then fix it.
+#[inline(never)]
+pub fn first_slow_sample(samples: &[u64], threshold: u64) -> Option<(usize, u64)> {
+    // TODO(module-054): debug why a sample equal to the threshold is reported
+    // as slow. Keep the function non-inlined so debuggers can break on it.
+    samples
+        .iter()
+        .copied()
+        .enumerate()
+        .find(|(_, duration)| *duration >= threshold)
+}
