@@ -74,7 +74,7 @@
 | ![C](https://img.shields.io/badge/C-Intermediate%20Rust%20I-8BC34A?style=for-the-badge) | 021–029 | Closures, iterators, pattern matching, trait objects, smart pointers |
 | ![D](https://img.shields.io/badge/D-Concurrency%20%26%20Unsafe-009688?style=for-the-badge) | 031–039 | Threads, `Mutex`/`Arc`, channels, unsafe Rust, macros, Cargo |
 | ![E](https://img.shields.io/badge/E-Async%20Rust-2196F3?style=for-the-badge) | 041–049 | Tokio runtime, async I/O, streams, pinning, structured concurrency |
-| ![F](https://img.shields.io/badge/F-Systems%20%26%20Performance-673AB7?style=for-the-badge) | 051–059 | Memory layout, FFI, profiling, benchmarking, SIMD, embedded |
+| ![F](https://img.shields.io/badge/F-Systems%20%26%20Performance-673AB7?style=for-the-badge) | 051–059 | Memory layout, FFI, native debugging, profiling, benchmarking, SIMD, embedded |
 | ![G](https://img.shields.io/badge/G-Backend%20Web-00BCD4?style=for-the-badge) | 061–069 | Axum, REST APIs, `sqlx`, JWT auth, middleware, Actix-web, Docker |
 | ![H](https://img.shields.io/badge/H-CLI%2C%20Networking%20%26%20Distributed-9C27B0?style=for-the-badge) | 071–079 | `clap`, `ratatui`, TCP/UDP, gRPC, message queues, distributed systems |
 | ![I](https://img.shields.io/badge/I-WASM%2C%20Frontend%2C%20Game%2C%20Blockchain-E91E63?style=for-the-badge) | 081–089 | WebAssembly, Leptos, Bevy ECS, embedded revisited, smart contracts |
@@ -401,7 +401,7 @@ Tick the checkboxes below as you complete modules and capstones. Run
 - [ ] [Module 051 — Memory Layout Deep Dive](modules/module-051-memory-layout-deep-dive/README.md)
 - [ ] [Module 052 — FFI I: Calling C from Rust](modules/module-052-ffi-1-calling-c-from-rust/README.md)
 - [ ] [Module 053 — FFI II: Calling Rust from C](modules/module-053-ffi-2-calling-rust-from-c/README.md)
-- [ ] [Module 054 — Performance Profiling](modules/module-054-performance-profiling/README.md)
+- [ ] [Module 054 — Native Debugging & Performance Profiling](modules/module-054-performance-profiling/README.md)
 - [ ] [Module 055 — Benchmarking with Criterion](modules/module-055-benchmarking-with-criterion/README.md)
 - [ ] [Module 056 — Zero-Cost Abstractions & Optimization](modules/module-056-zero-cost-abstractions-and-optimization/README.md)
 - [ ] [Module 057 — SIMD & Low-Level Optimization](modules/module-057-simd-and-low-level-optimization/README.md)
